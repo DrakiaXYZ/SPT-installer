@@ -19,6 +19,6 @@ public class EftInstalledPreCheck : PreCheckBase
             return PreCheckResult.FromError("Your EFT installation could not be found, try running the Battlestate Games Launcher and ensure EFT is installed on your computer", "Retry", RequestReevaluation);
         }
         
-        return PreCheckResult.FromSuccess("EFT install folder found");
+        return PreCheckResult.FromSuccess($"EFT install folder found. Game Path:\n\n{_internalData.OriginalGamePath}");
     }
 }
